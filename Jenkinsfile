@@ -20,8 +20,8 @@ pipeline {
 
        stage('execute ansible scripts') {
            steps {
-               stage {
-
+               script {
+                   
                     echo  "execute ansible scripts"
                     def remote = [:]
                     remote.name = "ansible-server"
