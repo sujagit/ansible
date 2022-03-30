@@ -20,7 +20,7 @@
     - name: reconnect to server session
       meta: reset_connection
     - name: install python module
-      pip:
+      pip3:
         name:
           - docker
           - docker_compose
