@@ -21,11 +21,11 @@ pipeline {
        stage('execute ansible scripts') {
            steps {
                script {
-                   
+
                     echo  "execute ansible scripts"
                     def remote = [:]
                     remote.name = "ansible-server"
-                    remote.hots = "104.131.60.77"
+                    remote.host = "104.131.60.77"
                     remote.allowAnyHosts = true
 
                     withCredentials([sshUserPrivateKey(credentialsId:'ansible-ssh-key',keyFileVariable:'keyfile',usernameVariable:'user')]) {
